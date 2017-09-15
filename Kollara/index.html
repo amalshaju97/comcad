@@ -1,403 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+	<head>
+	
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kollara : Home</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
-    <!-- Font Awesome -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">    
-    <!-- Slick slider -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/> 
-    <!-- Fancybox slider -->
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
-    <!-- Animate css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css"/> 
-    <!-- Progress bar  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-progressbar-3.3.4.css"/> 
-     <!-- Theme color -->
-    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Kollara & Kollara</title>
+	<meta name="description" content="Xperia's">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
+	
+	
+	<link rel="stylesheet" href="css/materialize.css" type="text/css" media="all">
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+	
 
-    <!-- Main Style -->
-    <link href="style.css" rel="stylesheet">
-
-    <!-- Fonts -->
-
-    <!-- Open Sans for body font -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- Lato for Title -->
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>    
     
+	</head>
+	
+	<body ng-app="Kollara">
+	
 
-  </head>
-  <body>
+	<script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script> 
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="js/script.js"></script>
+	
+		
+		 
+			  <nav style = "opacity:1;background-color:#ffffff;height:83px; " >
+    <div class="nav-wrapper" style="line-height:80px;">
+	  <img src="images/logo.png" style="width:50px;height:50px;margin-left:8px;margin-top:12px;"></img>
+      <a href="#" class="brand-logo" style="margin-left:20px;color:#2b4162;">Kollara & Kollara</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+     
+	  <ul class="right hide-on-med-and-down"style="margin-right:2%;">
+	     	
+		<li><a href="#!/" style="color:#2b4162"> Home</a></li>
+        <li><a href="#!services" style="color:#2b4162"> Services</a></li>
+        <li><a href="#!contact" style="color:#2b4162"> Contact Us</a></li>
+		<li><a href="#!about" style="color:#2b4162"> About Us</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#!login"  >Log In</a></li>
+        <li><a href="#!register">Register</a></li>
+      </ul>
+    </div>
+  </nav>
   
-  <!-- BEGAIN PRELOADER -->
-  <div id="preloader">
-    <div id="status">&nbsp;</div>
-  </div>
-  <!-- END PRELOADER -->
+	
 
-  <!-- SCROLL TOP BUTTON -->
-  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
-  <!-- END SCROLL TOP BUTTON -->
+	
+	 <div ng-view ></div>
 
-
-
-
-  <!-- BEGIN MENU -->
-  <section id="menu-area">      
-    <nav class="navbar navbar-default" role="navigation">  
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->              
-          <!-- TEXT BASED LOGO -->
-	   <img src="assets/images/logo.png" style="width:60px;height:60px;margin-top:6px;margin-left:-107%;"></img>
-          <a class="navbar-brand" href="index.html" style="font-color:#2b4162;">Kollara&nbsp;&&nbsp;Kollara</a>              
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="feature.html">Services</a></li>
-            <li><a href="service.html">Contact Us</a></li>
-            <li><a href="portfolio.html">About Us</a></li>
-            
-          </ul>                     
-        </div><!--/.nav-collapse -->
-        
-      </div>     
-    </nav>
-  </section>
-  <!-- END MENU --> 
-
-  <!-- Start slider -->
-  <section id="slider">
-    <div class="main-slider">
-      <div class="single-slide">
-        <img src="assets/images/slider-1.jpg" alt="img">
-       <div class="slide-content">
+	<div style="">
+	<footer class="page-footer" style="background-color:#2b4162;">
           <div class="container">
             <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="slide-article">
-                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Creative Design & Best Feature</h1>
-                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-                 
-                </div>
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="single-slide">
-        <img src="assets/images/slider-3.jpg" alt="img">
-        <div class="slide-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="slide-article">
-                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">We are Best Team & Support you always</h1>
-                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-                 
-                </div>
-              </div>
-            
-            </div>
-          </div>
-        </div>
-      </div>       
-	    <div class="single-slide">
-        <img src="assets/images/slider-3.jpg" alt="img">
-        <div class="slide-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <div class="slide-article">
-                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">We are Best Team & Support you always</h1>
-                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-                 
-                </div>
-              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;Linked In</a></li>
               
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>
-  </section>
-  <!-- End slider -->
-
-  <!-- Start Feature -->
-  <section id="feature">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-area">
-            <h2 class="title">Features</h2>
-            <span class="line"></span>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="feature-content">
-            <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <div class="single-feature wow zoomIn">
-                  <i class="fa fa-leaf feature-icon"></i>
-                  <h4 class="feat-title">Creative Design</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="single-feature wow zoomIn">
-                  <i class="fa fa-mobile feature-icon"></i>
-                  <h4 class="feat-title">Responsive Layouts</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="single-feature wow zoomIn">
-                  <i class="fa fa-thumbs-o-up feature-icon"></i>
-                  <h4 class="feat-title">Great Features</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="single-feature wow zoomIn">
-                  <i class="fa fa-gears feature-icon"></i>
-                  <h4 class="feat-title">Multiple Options</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="single-feature wow zoomIn">
-                  <i class="fa fa-code feature-icon"></i>
-                  <h4 class="feat-title">Quality Code</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="single-feature wow zoomIn">
-                  <i class="fa fa-smile-o feature-icon"></i>
-                  <h4 class="feat-title">Awesome Support</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Feature -->
-
-
-  <!-- Start Service -->
-  <section id="service" style="background-color:#dcdcdd" >
-    <div class="container" >
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-area">
-            <h2 class="title">Our Services</h2>
-            <span class="line"></span>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="service-content">
-            <div class="row">
-              <!-- Start single service -->
-              <div class="col-md-4 col-sm-6">
-                <div class="single-service wow zoomIn">
-                  <i class="fa fa-desktop service-icon"></i>
-                  <h4 class="service-title">Web Development</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-              </div>
-              <!-- End single service -->
-              <!-- Start single service -->
-              <div class="col-md-4 col-sm-6">
-                <div class="single-service wow zoomIn">
-                  <i class="fa fa-paw service-icon"></i>
-                  <h4 class="service-title">Digital Design</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-              </div>
-              <!-- End single service -->
-              <!-- Start single service -->
-              <div class="col-md-4 col-sm-6">
-                <div class="single-service wow zoomIn">
-                  <i class="fa fa-magic service-icon"></i>
-                  <h4 class="service-title">Marketing</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-              </div>
-              <!-- End single service -->
-              <!-- Start single service -->
-              <div class="col-md-4 col-sm-6">
-                <div class="single-service wow zoomIn">
-                  <i class="fa fa-shopping-cart service-icon"></i>
-                  <h4 class="service-title">E-commerce</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-              </div>
-              <!-- End single service -->
-              <!-- Start single service -->
-              <div class="col-md-4 col-sm-6">
-                <div class="single-service wow zoomIn">
-                  <i class="fa fa-mobile service-icon"></i>
-                  <h4 class="service-title">App Development</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-              </div>
-              <!-- End single service -->
-              <!-- Start single service -->
-              <div class="col-md-4 col-sm-6">
-                <div class="single-service wow zoomIn">
-                  <i class="fa fa-rocket service-icon"></i>
-                  <h4 class="service-title">S.E.O</h4>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-              </div>
-              <!-- End single service -->
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright
+            
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Service -->
+        </footer>
+	</div>
+	
 
-
-
-  <!-- Start Pricing table -->
-  <section id="our-team">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-area">
-            <h2 class="title">Our Team</h2>
-            <span class="line"></span>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="our-team-content">
-            <div class="row">
-              <!-- Start single team member -->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-       
-              </div>
-              <!-- Start single team member -->
-              <!-- Start single team member -->
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                 <div class="team-member-img">
-                   <img src="assets/images/team-member-3.png" alt="team member img">
-                 </div>
-                 <div class="team-member-name">
-                   <p>Bernice Neumann</p>
-                   <span>Designer</span>
-                 </div>
-                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                 <div class="team-member-link">
-                   <a href="#"><i class="fa fa-facebook"></i></a>
-                   <a href="#"><i class="fa fa-twitter"></i></a>
-                   <a href="#"><i class="fa fa-linkedin"></i></a>
-                 </div>
-                </div> 
-              </div>
-              <!-- Start single team member -->
-              <!-- Start single team member -->
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                 <div class="team-member-img">
-                   <img src="assets/images/team-member-3.png" alt="team member img">
-                 </div>
-                 <div class="team-member-name">
-                   <p>Dvid Cameron</p>
-                   <span>Developer</span>
-                 </div>
-                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                 <div class="team-member-link">
-                   <a href="#"><i class="fa fa-facebook"></i></a>
-                   <a href="#"><i class="fa fa-twitter"></i></a>
-                   <a href="#"><i class="fa fa-linkedin"></i></a>
-                 </div>
-                </div>
-              </div>
-              <!-- Start single team member -->
-              <!-- Start single team member -->
-              <div class="col-md-3 col-sm-6 col-xs-12">
-        
-              </div>
-              <!-- Start single team member -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Pricing table -->
-  
- 
-
-
-  <!-- Start subscribe us -->
-  <section id="subscribe">
-    <div class="subscribe-overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="subscribe-area">
-              <h2 class="wow fadeInUp">Subscribe Newsletter</h2>
-              <form action="" class="subscrib-form wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                <input type="text" placeholder="Enter Your E-mail..">
-                <button class="subscribe-btn" type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End subscribe us -->
-
- 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- Bootstrap -->
-  <script src="assets/js/bootstrap.js"></script>
-  <!-- Slick Slider -->
-  <script type="text/javascript" src="assets/js/slick.js"></script>    
-  <!-- mixit slider -->
-  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
- <!-- counter -->
-  <script src="assets/js/waypoints.js"></script>
-  <script src="assets/js/jquery.counterup.js"></script>
-  <!-- Wow animation -->
-  <script type="text/javascript" src="assets/js/wow.js"></script> 
-  <!-- progress bar   -->
-  <script type="text/javascript" src="assets/js/bootstrap-progressbar.js"></script>  
-  
- 
-  <!-- Custom js -->
-  <script type="text/javascript" src="assets/js/custom.js"></script>
-  
-  </body>
+	
+	</body>
+	
 </html>
