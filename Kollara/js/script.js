@@ -45,6 +45,7 @@ $( document ).ready(function(){
 	 
 		 $('.collapsible').collapsible();
 		    $('ul.tabs').tabs();
+			$(".button-collapse").sideNav();
     
 	
    

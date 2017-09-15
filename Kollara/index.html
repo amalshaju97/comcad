@@ -30,23 +30,33 @@
 	<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 	<script src="js/script.js"></script>
+	<style>
+	@media (max-width: 992px) {
+    .log {
+        display:none;
+    }
+}
 	
+	</style>
 		
 		 
 			  <nav style = "opacity:1;background-color:#ffffff;height:83px; " >
     <div class="nav-wrapper" style="line-height:80px;">
-	  <img src="images/logo.png" style="width:50px;height:50px;margin-left:8px;margin-top:12px;"></img>
+	  <img class="log" src="images/logo.png" style="width:50px;height:50px;margin-left:8px;margin-top:12px;"></img>
       <a href="#" class="brand-logo" style="margin-left:20px;color:#2b4162;">Kollara & Kollara</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i style="color:black;margin-top:13px;" class="material-icons">menu</i></a>
      
 	  <ul class="right hide-on-med-and-down"style="margin-right:2%;">
-	     	
 		<li><a href="#!/" style="color:#2b4162"> Home</a></li>
         <li><a href="#!services" style="color:#2b4162"> Services</a></li>
         <li><a href="#!contact" style="color:#2b4162"> Contact Us</a></li>
 		<li><a href="#!about" style="color:#2b4162"> About Us</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
+	    <li><div class="user-view">
+			<center><img class="circle" style="width:100px;height:100px;margin-bottom:30px;" src="images/logo.png"></img></center>
+		</li>
+		<div class="divider"></div>
         <li><a href="#!/"  ><i class="fa fa-home fa-2x"  style="color:black;" aria-hidden="true"></i>Home</a></li>
 		<div class="divider"></div>
         <li><a href="#!services"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Services</a></li>
