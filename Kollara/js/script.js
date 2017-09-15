@@ -43,7 +43,8 @@ $( document ).ready(function(){
 	
 	 $('.slider').slider();
 	 
-	
+		 $('.collapsible').collapsible();
+		    $('ul.tabs').tabs();
     
 	
    
