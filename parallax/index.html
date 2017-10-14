@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -12,87 +13,46 @@
 
   <body>
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <style>
 
-    .parent{
-      display: flex;
-      height: 500px;
-    }
-
-    .gear{
-      position: relative;
-      width: 200px;
-      height: 200px;
-      margin: auto;
-      background: #54daa5;
-      border-radius: 50%;
-      animation-name: spin;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-
-    .gear .center{
-      position: absolute;
-      top: 50px;
-      left: 50px;
-      z-index: 10;
-      width: 100px;
-      height: 100px;
-      background: #198;
-      border-radius: 50%;
-    }
-
-    .tooth{
-      position: absolute;
-      top: -25px;
-      left: 75px;
-      z-index: 1;
-      width: 45px;
-      height: 250px;
-      background:#54daa5;
-    }
-
-    .tooth:nth-child(2){
-      transform: rotate(45deg);
-    }
-
-    .tooth:nth-child(3){
-      transform: rotate(90deg);
-    }
-
-    .tooth:nth-child(4){
-      transform: rotate(135deg);
-    }
-
-    @keyframes spin {
-      from {transform: rotate(0deg); }
-      to {transform: rotate(360deg);}
-    }
-
-
-
-
-    </style>
 
 
           <div class="row" >
-                <div class="col l7">
+                <div class="col l7 s12">
                   <center><h2 style="padding-top:90px;">CSS Brain</h2></center>
                   <div class="divider" style="margin-left:30%;margin-right:30%;"></div>
                   <p style="padding-left:20%;padding-right:15%;padding-top:4%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit nisl, ornare at lorem vel, condimentum imperdiet diam. Quisque a tortor eu elit consectetur lacinia quis ut ligula. Nullam ultricies varius quam in semper. Morbi porta dignissim elit vel placerat. Ut accumsan urna ut diam ultricies rutrum. Donec consectetur tellus faucibus sollicitudin commodo. Morbi justo ligula, pharetra sed iaculis a, venenatis eu nisl.Integer porta libero in nis ullamcorper ultrices. Nullam sed eros non orci egestas pellentesque. Proin semper, lectus at malesuada cursus, risus nunc pulvinar eros, rhoncus cursus nisl ex id diam.</p>
                 </div>
                 <div class="col l5" >
-                  <img src="images/brain.jpg" style="height:550px;" ></img>
+                  <svg id="brain">
+
+              <g>
+                <g id="a"
+                  fill="none"
+                  stroke-linejoin="round"
+                  stroke="currentcolor"
+                  stroke-width="4"
+                  stroke-linecap="round">
+                  <path   stroke-width="10" style="stroke-dasharray:none;"
+                    d="m 474,194.1 c 1.2,-10.6 -0.5,-21.5 -4.9,-31.2 -6.4,-14.2 -18.5,-25.7 -33,-31.4 -1.9,-6.7 -5.7,-12.8 -10.9,-17.5 -7.3,-6.6 -17.2,-10.1 -27,-9.6 -3.5,-6.16 -8.6,-11.38 -14.7,-14.93 -7.9,-4.57 -17.3,-6.34 -26.3,-4.88 -9,1.45 -17.4,6.11 -23.4,12.96 -5.1,5.85 -8.3,13.05 -10,20.65 -1.7,7.5 -1.7,15.3 -1.7,23 l 1.3,224.6 c 0.1,17 2.3,33.9 3.7,50.8 1.3,15.9 0.7,32 -0.8,47.9 -0.8,8.7 -2,17.5 -2,26.3 0,8.7 1.1,17.7 4.7,25.7 5.2,11.9 15.5,21.1 27,27 22,11.3 49.4,11.3 71.5,0.2 19.8,-10 35.1,-28.5 41.1,-49.9 8.9,-3.1 16.9,-8.7 22.9,-15.9 5.9,-7.3 9.8,-16.3 11.1,-25.6 1,-7.5 0.3,-15.3 -2,-22.5 2.7,-3.9 5,-8.1 6.7,-12.5 5.3,-13.6 5,-29.3 -0.6,-42.8 9.4,-7.4 16.5,-17.7 19.9,-29.2 3.3,-11.5 3,-24 -0.9,-35.3 -4.4,-12.7 -13.4,-23.7 -25,-30.6 6.2,-17.3 5.6,-37 -1.6,-53.9 C 493.8,213 485,202 474,194.1 Z"/>
+
+
+                  <path id="brain_path"  opacity=".9" class="circuits"
+                    d="M429.6 253c.7-9 6.5-15.4 14.2-18 3.6-1 7.5-1.2 11.2-.8 7.6 1 15 4.5 20 10-2.8 2.5-5 5.6-6.3 9.2-3.3 11 2.4 22.2 12.7 25.7-8.7.4-14.7 8-13.4 15.7.7 4 3.2 7.2 4 11 1.4 13.6-12.6 20.4-23.5 16.7-9.4-3.6-16-13-17.5-21.7-8 12.6-25.4 21.7-36.8 17-8.8-4-9.8-13-12-20.8-3.7-14.3-19.4-9.7-25.4-3.5m5.6 84.3c-17-2.7-10.2-24 5-22m4-82.5c-4.2-11.2-21-9.2-23.2-.6-3 11.3 4.8 15 8.6 20.8 1.4 2 2.6 4.2 2.7 6.7-.6 9-11 11.5-15.6 17-6.5 8.7-.8 19.6 9.2 20.5m49.6-170.5c.5 7.6-5.3 14.5-12.5 15-7.8 0-13.6-6.4-13.4-13.7m8.3 89.5c2.2-10.5 11-18.5 21-19.6 10.4-.6 19.7 5.6 23.3 14.5m47.3 77.5c-10 1.8-14 11.7-11.6 20.3 3.4 10 13.3 17.3 22 20-3.5-1.6-7.7-1.5-11 .3-3.5 2-6 5.5-6.6 9-1.7 9.2 17 17 7.2 26.8-8.6 8.6-25-.5-28-11.4-.7-3-1-6.3-1-9.5.4-8.3 0-19.2-9.3-21-7.4-1-13.4 4.2-15.2 10.7-1.3 4.8-.3 10-2 14.6-3.2 9-13 13-21 9.6 3 5.3 3.5 12.2 1 18-2.5 6-8.3 10.6-14.8 11.8 13.2-1.5 22.3 13.5 19 23-4.2 11.7-18.6 19-16.4 32.4 4.2 15.4 22.4 15.5 25.3 3.5.8-6.4-3-12.3-3-18 1-10.4 12-15.3 20.6-11.3 7.7 4 11.2 13.7 9 21-1.4 5-5 9.4-10 11.5 20.3 30.7-25.6 43.3-35.5 23-16.4 17.6-44.7-3.3-33.5-24m125.2-148.4c12-7.2 14-23 4.6-32.3-5.7-5-13.4-6.6-20-4.5M362.7 183c-10.3-7.3-12-20.3-3-28-9.8-6-12.4-18.6-5.6-26.6 9-10 20.8-8.8 27 1.4 2 3.2 2.8 7 2.2 10.7M375 484.2c-3 3.5-7.7 5.5-12.3 5.3-10-1-16.6-10.3-14.6-19.3 3.5-11.7 14.4-11.5 23.5-13.8 5-1.5 10-5 9.3-10.6-1.4-6.6-8.5-8-14-9.2-5.4-1-13.4-4-12-10.6 2-9.8 21.6-4.5 22-15.8.2-13-15.3-6.7-22.5-10.6-13-7.8-5.6-24.4 8-21.8 9.8 2.4 17.4 6 26.6 7 6.8 0 13-3.7 15.6-9.5 4-10.7-3.4-17.2-10.2-21.2-7.8-4.5-16 1.6-27 1.7-6.6 0-16-9-14.2-18 2.7-14.4 16.8-17 24-6.6m4-201.2c10.3-3.7 23-3 30 4.3 4.4 4.6 5.3 13.8 1.8 18.6-5 6.8-12.8 7.3-10.2 14.6 2.3 3.8 7 3.5 10.4 1.4 10-6.8 15.6-14.2 26.4-6.8 11.5 8 9.2 25.3 0 33m-18 233c2.8-11 13.7-15.7 22.5-10.7 5.3 3.5 7.8 9.4 7 15 6-2.8 13.8-3.3 19 .5 9 6.4 15 19.7 6 27-6.3 5-13 2.3-17-3.7-4-6.4-10.6-10.5-17.6-7-4.5 2.7-6.6 7.5-6 12.2m4-266.3c5.2 1.5 9.8 4.5 13.2 8.6 3.4 4 5.6 9.2 6 14.5.7 5.7-.7 11.5-3.6 16.4m-109.6-1.7c-1.3-3-1.6-6.2-1-9.3 2-7.7 8.7-10.7 15-13 3.7-1.2 7.5-2.6 10-5.4 5.2-5.8 4.4-14.4-1-19-6.2-4.7-14.7-3.4-19 2.2m97 78.5c14 1.2 12.2 22.2-2 19-6-1.5-8.7-8.2-13.6-10.7-10.6-5.5-25 6.7-27.4 15 1.5-8.8-1-18.7-8.2-25-6-5.4-13.6-8.8-21.5-9.6m-14.2-45c11 7.5 14.2 21.5 6.7 31.2-6.4 8-17.2 11-25.6 6m68.7-47.4c-3.4-10.5 7.2-19.6 16.6-16.3M390 232c-3.2-3.5-4.8-8.3-4.5-13 1-10.6 10-17.2 19.3-17.7 11.8.2 22.7 8.2 27.6 17.6 3 5.7 4.3 12.5 3.6 19m-41.8 116c.3-4.7 3-11.3 7-14.2 9-6 18.3-2.5 25 3.8 11 10 27.3 14.8 39 7.2"/>
+                  </g>
+                </g>
+                 <g>   <use transform="matrix(-1 0 0 1 640 0)" xlink:href="#a"/>
+                </g>
+              </svg>
                 </div>
           </div>
 
 
 
       <div class="row" style="background-color:#F2F2F2">
-        <div class="col l5" >
+        <div class="col l5 s12" >
           <img src="images/shake_hand.jpg" style="height:450px;" ></img>
         </div>
             <div class="col l7">
@@ -105,12 +65,12 @@
 
 
       <div class="row" >
-        <div class="col l7">
+        <div class="col l7 s12">
           <center><h2 style="padding-top:0px;">Smart</h2></center>
           <div class="divider" style="margin-left:30%;margin-right:30%;"></div>
           <p style="padding-left:15%;padding-right:10%;padding-top:4%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit nisl, ornare at lorem vel, condimentum imperdiet diam. Quisque a tortor eu elit consectetur lacinia quis ut ligula. Nullam ultricies varius quam in semper. Morbi porta dignissim elit vel placerat. Ut accumsan urna ut diam ultricies rutrum. Donec consectetur tellus faucibus sollicitudin commodo. Morbi justo ligula, pharetra sed iaculis a, venenatis eu nisl.Integer porta libero in nis ullamcorper ultrices. Nullam sed eros non orci egestas pellentesque. Proin semper, lectus at malesuada cursus, risus nunc pulvinar eros, rhoncus cursus nisl ex id diam.</p>
         </div>
-  <div class="col l5" >
+  <div class="col l5 s12" >
               <div style="margin-left:30%;margin-top:3em;">
                 <li>
                   <figure class='book'>
@@ -153,7 +113,7 @@
 
 
 
-            <div class="col l5" >
+            <div class="col l5 s12" >
               <div class="parent">
           <div class="gear">
             <div class="center"></div>
@@ -165,7 +125,7 @@
         </div>
             </div>
 
-            <div class="col l7">
+            <div class="col l7 s12">
               <center><h2 style="padding-top:40px;">Robust</h2></center>
               <div class="divider" style="margin-left:30%;margin-right:30%;"></div>
               <p style="padding-left:20%;padding-right:10%;padding-top:4%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit nisl, ornare at lorem vel, condimentum imperdiet diam. Quisque a tortor eu elit consectetur lacinia quis ut ligula. Nullam ultricies varius quam in semper. Morbi porta dignissim elit vel placerat. Ut accumsan urna ut diam ultricies rutrum. Donec consectetur tellus faucibus sollicitudin commodo. Morbi justo ligula, pharetra sed iaculis a, venenatis eu nisl.Integer porta libero in nis ullamcorper ultrices. Nullam sed eros non orci egestas pellentesque. Proin semper, lectus at malesuada cursus, risus nunc pulvinar eros, rhoncus cursus nisl ex id diam.</p>
@@ -173,16 +133,149 @@
 
       </div>
 
+      <div class="row" style="margin-bottom:2em;">
 
 
 
-    <script>
 
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
+            <div class="col l7 s12">
+              <center><h2 style="padding-top:1.5em;">Secure</h2></center>
+              <div class="divider" style="margin-left:30%;margin-right:30%;"></div>
+              <p style="padding-left:20%;padding-right:10%;padding-top:4%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit nisl, ornare at lorem vel, condimentum imperdiet diam. Quisque a tortor eu elit consectetur lacinia quis ut ligula. Nullam ultricies varius quam in semper. Morbi porta dignissim elit vel placerat. Ut accumsan urna ut diam ultricies rutrum. Donec consectetur tellus faucibus sollicitudin commodo. Morbi justo ligula, pharetra sed iaculis a, venenatis eu nisl.Integer porta libero in nis ullamcorper ultrices. Nullam sed eros non orci egestas pellentesque. Proin semper, lectus at malesuada cursus, risus nunc pulvinar eros, rhoncus cursus nisl ex id diam.</p>
+            </div>
 
 
-    </script>
+            <div class="col l5 s12" >
+
+              <svg width="326px" height="325px" style="margin-top:8em;margin-left:15%;">
+
+          <circle id="container"
+            cx="160" cy="158" r="158"
+            fill="#8cfddf" />
+
+          <g transform="translate(157.743592, 157.352285) rotate(-11.400000) translate(-157.743592, -157.352285) translate(23.743592, 23.852285)">
+
+            <g id="loops"
+              fill="none"
+              stroke="#fc2876"
+              stroke-linecap="round"
+              stroke-width="8">
+              <path id="loop0"
+                opacity="0"
+                stroke-dasharray="0 150 150"
+                d="M134.031936,133 L134.031936,133 C134.034111,133.333877 134.0352,133.668011 134.0352,134.0024 C134.0352,181.984758 111.602085,224.729939 76.6503753,252.319586 L76.6503753,252.319586" />
+
+              <path id="loop1"
+                opacity="0"
+                stroke-dasharray="0 330 54 20 0"
+                d="M94.2569871,259.395133 C128.913666,228.72779 150.7627,183.915376 150.7627,134.0029 C150.8164,124.7096 143.2894,117.1816 134.0024,117.1816 C124.986044,117.1816 117.62766,124.277227 117.3076,134.002 C117.3076,179.14191 94.9737823,219.068435 60.7516921,243.331031"
+                />
+
+              <path id="loop2"
+                opacity="0"
+                stroke-dasharray="0 370 86 20 122 20 86 20 86"
+                d="M113.558275,264.191925 C146.879638,230.874021 167.4893,184.844109 167.4893,134.0029 C167.5283,115.479 152.5183,100.469 134.0023,100.469 C115.760736,100.469 100.92322,115.034207 100.5811,134 L100.5811,134 C100.5811,134.000667 100.5811,134.001333 100.5811,134.002 C100.5811,175.452002 79.0606588,211.878612 46.5822155,232.715715 L46.5822155,232.715715"
+                />
+
+              <path id="loop3"
+                opacity="0"
+                stroke-dasharray="0 410 190 20 300"
+                d="M134.544728,266.234724 C165.473308,230.906991 184.2168,184.643027 184.2168,134.0039 C184.2422,106.249 161.7502,83.757 134.0022,83.757 C106.540513,83.757 84.2259401,105.787235 83.8535,134 L83.8535,134 C83.8535,134.0005 83.8535,134.001 83.8535,134.0015 C83.8535,170.956853 63.9005403,203.254445 34.1778448,220.705439 L34.1778448,220.705439" />
+
+              <path id="loop4"
+                opacity="0"
+                stroke-dasharray="0 445 40 20 330 20 0"
+                d="M157.204418,264.861412 C184.663549,228.444315 200.9434,183.124248 200.9434,134.0039 C200.9541,97.02 170.9801,67.044 134.0021,67.044 C97.3165849,67.044 67.5249474,96.5444819 67.127,134 L67.127,134 C67.127,134.000333 67.127,134.000667 67.127,134.001 C67.127,165.68211 49.532981,193.256713 23.5810329,207.484219 L23.5810329,207.484219 " />
+
+               <path id="loop5"
+                opacity="0"
+                stroke-dasharray="0 470 160 20 90 20 100"
+                d="M181.658883,258.868565 C204.470636,222.721897 217.6709,179.903697 217.6709,134.0039 C217.6709,133.669102 217.670198,133.334468 217.668795,133 C217.140217,87.2654619 179.886931,50.332 134.002,50.332 C88.0946689,50.332 50.8266645,87.298331 50.3994,134 L50.3994,134 C50.3994,134.000167 50.3994,134.000333 50.3994,134.0005 C50.3994,159.640749 35.9986381,181.920309 14.8422679,193.18937 L14.8422679,193.18937" />
+
+              <path id="loop6"
+                opacity="0"
+                stroke-dasharray="0 485 80 20 300 20 0"
+                d="M208.090697,245.995642 C224.926163,212.281614 234.3975,174.248544 234.3975,134.0044 C234.3975,133.669446 234.396844,133.334646 234.395533,133 C233.885454,78.0667232 189.136719,33.6205 134.0019,33.6205 C78.872583,33.6205 34.1255383,78.0546476 33.6719,134 L33.6719,134 C33.6719,134.000167 33.6719,134.000333 33.6719,134.0005 C33.6719,152.825989 23.3264308,169.237766 8.00929838,177.857974 L8.00929671,177.85797" />
+
+              <path id="loop7"
+                opacity="0"
+                stroke-dasharray="0 490 220 20 400 0"
+                d="M236.701867,220.918502 C246.050576,193.665519 251.125,164.427513 251.0918,134 C251.09126,69.3284596 198.671467,16.907 134.0018,16.907 C69.3301333,16.907 16.9073404,69.3284596 16.9068,134 L16.9068,134 C16.9453,145.158501 11.4993964,155.045954 3.11963966,161.148561" />
+
+              <path id="loop8"
+                opacity="0"
+                stroke-dasharray="0 425 110 20 180 20 0"
+                d="M267.8047,134 C267.803619,60.0979192 207.902033,0.195 134.0017,0.195 C60.0993667,0.195 0.194780789,60.0979192 0.193700015,134" />
+            </g>
+
+            <g id="markers"
+              stroke="#031C82"
+              stroke-width="4"
+              fill="none">
+              <circle id="marker0"
+                cx="70" cy="80" r="0" />
+              <circle id="marker1"
+                cx="200" cy="222" r="0" />
+              <circle id="marker2"
+                cx="59" cy="170" r="0" />
+              <circle id="marker3"
+                cx="198" cy="80" r="0" />
+              <circle id="marker4"
+                cx="134" cy="135" r="0" />
+              <circle id="marker5"
+                cx="144" cy="17" r="0" />
+              <circle id="marker6"
+                cx="120" cy="230" r="0" />
+              <circle id="marker7"
+                cx="204" cy="40" r="0" />
+            </g>
+
+            <g id="connectors"
+              stroke="#031C82"
+              stroke-width="2"
+              stroke-dasharray="75 250 0 0"
+              stroke-dashoffset="75"
+              fill="none">
+              <line id="connector0"
+                x1="70" y1="80"
+                x2="200" y2="222" />
+              <line id="connector1"
+                x1="200" y1="222"
+                x2="59" y2="170" />
+              <line id="connector2"
+                x1="59" y1="170"
+                x2="198" y2="80" />
+              <line id="connector3"
+                x1="198" y1="80"
+                x2="134" y2="135" />
+              <line id="connector4"
+                x1="134" y1="135"
+                x2="144" y2="17" />
+              <line id="connector5"
+                x1="144" y1="17"
+                x2="120" y2="230" />
+              <line id="connector6"
+                x1="120" y1="230"
+                x2="204" y2="40" />
+            </g>
+
+          </g>
+
+          <circle id="flash"
+            opacity="0"
+            cx="160" cy="158" r="158" />
+
+          </svg>
+
+
+            </div>
+
+      </div>
+
+      <script src='js/anim.js'></script>
+
+        <script  src="js/script.js"></script>
+
+
   </body>
 </html>
