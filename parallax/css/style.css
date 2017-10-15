@@ -371,6 +371,19 @@ perspective: 1000px;
 transform-style: preserve-3d;
 }
 
+
+.booked {
+position: relative;
+width: 160px;
+height: 220px;
+-webkit-perspective: 1000px;
+-moz-perspective: 1000px;
+perspective: 1000px;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+transform-style: preserve-3d;
+}
+
 /*
 2. background & color
 */
@@ -760,15 +773,16 @@ transition-duration: 0.6s;
 /*
 5. events
 */
+/**Hover Amal*/
 
-.book:hover > .hardcover_front {
+.booked > .hardcover_front {
 -webkit-transform: rotateY(-145deg) translateZ(0);
 -moz-transform: rotateY(-145deg) translateZ(0);
 transform: rotateY(-145deg) translateZ(0);
 z-index: 0;
 }
 
-.book:hover > .page li:nth-child(1) {
+.booked > .page li:nth-child(1) {
 -webkit-transform: rotateY(-30deg);
 -moz-transform: rotateY(-30deg);
 transform: rotateY(-30deg);
@@ -777,7 +791,7 @@ transform: rotateY(-30deg);
 transition-duration: 1.5s;
 }
 
-.book:hover > .page li:nth-child(2) {
+.booked > .page li:nth-child(2) {
 -webkit-transform: rotateY(-35deg);
 -moz-transform: rotateY(-35deg);
 transform: rotateY(-35deg);
@@ -786,7 +800,7 @@ transform: rotateY(-35deg);
 transition-duration: 1.8s;
 }
 
-.book:hover > .page li:nth-child(3) {
+.booked > .page li:nth-child(3) {
 -webkit-transform: rotateY(-118deg);
 -moz-transform: rotateY(-118deg);
 transform: rotateY(-118deg);
@@ -795,7 +809,7 @@ transform: rotateY(-118deg);
 transition-duration: 1.6s;
 }
 
-.book:hover > .page li:nth-child(4) {
+.booked > .page li:nth-child(4) {
 -webkit-transform: rotateY(-130deg);
 -moz-transform: rotateY(-130deg);
 transform: rotateY(-130deg);
@@ -804,7 +818,7 @@ transform: rotateY(-130deg);
 transition-duration: 1.4s;
 }
 
-.book:hover > .page li:nth-child(5) {
+.booked> .page li:nth-child(5) {
 -webkit-transform: rotateY(-140deg);
 -moz-transform: rotateY(-140deg);
 transform: rotateY(-140deg);

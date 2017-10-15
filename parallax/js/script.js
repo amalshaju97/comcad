@@ -155,3 +155,25 @@ var containerDisappearKeyframes = [{
   r: 0,
   easing: easeInOutQuint
 }];
+
+
+
+var repeater;
+
+  function doWork()
+        {
+        $('.book').removeClass('book').addClass('booked');
+          window.setInterval(doWork2, 3000);
+
+        }
+
+        function doWork2()
+              {
+                $('.booked').removeClass('booked').addClass('book');
+                window.setInterval(doWork, 1000);
+
+              }
+
+
+doWork();
+doWork2();
