@@ -163,17 +163,16 @@ var repeater;
   function doWork()
         {
         $('.book').removeClass('book').addClass('booked');
-          window.setInterval(doWork2, 3000);
+          setTimeout(doWork2, 5000);
 
         }
 
         function doWork2()
               {
                 $('.booked').removeClass('booked').addClass('book');
-                window.setInterval(doWork, 1000);
+                setTimeout(doWork, 3000);
 
               }
 
 
 doWork();
-doWork2();
